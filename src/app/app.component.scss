@@ -1,0 +1,15 @@
+
+main{
+    header{
+        background: url(../images/background.jpg);
+        height: 100vh;
+        .headerTitle{
+            h1{
+                color: #fff;
+                text-align: center;
+                font-size: 2rem;
+                margin-top: 12rem;
+            }
+        }
+    }
+}
