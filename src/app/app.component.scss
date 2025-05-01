@@ -4,12 +4,16 @@ main{
         background: url(../images/background.jpg);
         height: 100vh;
         .headerTitle{
+            text-align: center;
+            color: #fff;
+            margin-top: 12rem;
             h1{
-                color: #fff;
-                text-align: center;
                 font-size: 2rem;
-                margin-top: 12rem;
             }
+        }
+        a{
+            color: #fff;
+            text-decoration: underline;
         }
     }
 }

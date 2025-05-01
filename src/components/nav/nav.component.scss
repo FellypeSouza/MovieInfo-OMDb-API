@@ -17,6 +17,13 @@ nav{
                 a{
                     color: #fff;
                 }
+                a:hover{
+                    color: rgb(121, 121, 121);
+                    transition: all 250ms;
+                }
+                a:not(:hover){
+                    transition: all 250ms;
+                }
             }
         }
     }
