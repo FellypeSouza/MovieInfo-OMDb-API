@@ -2,9 +2,16 @@
     <section class="recommendedMovies">
         <h3>Filmes Recomendados</h3>
         <section class="movies">
-            <section class="movie">
-                @for (content of contents; track content) {}
-            </section>
+            @for (content of contents; track content) {
+                <section class="movie">
+                    <img src={{content.Poster}} alt="Poster" width="180px" height="270px">
+                    <!-- 
+                        <h1>{{content.Title}}</h1>
+                        <h1>{{content.Year}}</h1>
+                        <h1>{{content.Type}}</h1>
+                        -->
+                </section>
+                }
         </section>
     </section>
     <section class="recommendedSeries">

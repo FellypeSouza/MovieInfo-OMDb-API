@@ -3,7 +3,15 @@
     color: #fff;
     padding: 1rem;
     .recommendedMovies{
-        
+        .movies{
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: auto auto auto auto auto auto;
+        }
+        .movie{
+            width: 180px;
+            margin-bottom: 2rem;
+        }
     }
     .recommendedSeries{
         

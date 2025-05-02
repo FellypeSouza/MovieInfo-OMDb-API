@@ -13,9 +13,8 @@ export class ContentComponent implements OnInit{
   constructor(private getContentService: GetContentService){}
 
   ngOnInit():void{
-    this.getContentService.getContent().subscribe((data)=>{
-      this.contents = data; //Os dados são salvos no Array
-      console.log(this.contents );
+      this.getContentService.getMoviesbyName("Matrix", "Movie").subscribe((data)=>{
+      this.contents = data.Search; //Os dados são salvos no Array
     })
   }
 }
