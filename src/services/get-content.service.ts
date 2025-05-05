@@ -9,7 +9,8 @@ import { Observable } from 'rxjs'; //Observable é usado para trabalhar com os d
 export class GetContentService {
   private apiUrlType:string = "";
   private apiUrlMovieName:string = "";
-  private apiUrl:string = `http://www.omdbapi.com/?s=${this.apiUrlMovieName}&type=${this.apiUrlType}&apikey=f3f25a3a&`; //Url da Api
+  private apiPageNumber:string = "";
+  private apiUrl:string = `http://www.omdbapi.com/?s=${this.apiUrlMovieName}&type=${this.apiUrlType}&page=${this.apiPageNumber}&apikey=f3f25a3a&`; //Url da Api
 
 
   constructor(private http: HttpClient) { }
@@ -17,17 +18,13 @@ export class GetContentService {
   getContent():Observable<any>{
     return this.http.get(this.apiUrl);
   }
-
-  getReccomendedMovies():Observable<any>{
-    let content = this.http.get(this.apiUrl);
-    return content
-  }
   
-  getMoviesbyName(name:string, type:string):Observable<any>{
+  getMoviesbyName(name:string, type:string, pages:string):Observable<any>{
     try{
       this.apiUrlMovieName = name;
       this.apiUrlType = type;
-      this.apiUrl = `http://www.omdbapi.com/?s=${this.apiUrlMovieName}&type=${this.apiUrlType}&apikey=f3f25a3a&`;
+      this.apiPageNumber = pages;
+      this.apiUrl = `http://www.omdbapi.com/?s=${this.apiUrlMovieName}&type=${this.apiUrlType}&page=${this.apiPageNumber}&apikey=f3f25a3a&`;
     }
     catch(err){
       console.log(err);
@@ -36,5 +33,18 @@ export class GetContentService {
       return this.http.get(this.apiUrl);
     }
   }
-
+  getSeriesbyName(name:string, type:string, pages:string):Observable<any>{
+    try{
+      this.apiUrlMovieName = name;
+      this.apiUrlType = type;
+      this.apiPageNumber = pages;
+      this.apiUrl = `http://www.omdbapi.com/?s=${this.apiUrlMovieName}&type=${this.apiUrlType}&page=${this.apiPageNumber}&apikey=f3f25a3a&`;
+    }
+    catch(err){
+      console.log(err);
+    }
+    finally{
+      return this.http.get(this.apiUrl);
+    }
+  }
 }

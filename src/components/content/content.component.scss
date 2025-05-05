@@ -2,18 +2,16 @@
     background-color: #000;
     color: #fff;
     padding: 1rem;
-    .recommendedMovies{
-        .movies{
+    .recommendedMovies, .recommendedSeries{
+        .movies, .series{
             display: grid;
             justify-content: space-between;
             grid-template-columns: auto auto auto auto auto auto;
         }
-        .movie{
+        .movie, .serie{
             width: 180px;
             margin-bottom: 2rem;
         }
     }
-    .recommendedSeries{
-        
-    }
+    
 }

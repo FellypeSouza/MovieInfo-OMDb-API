@@ -1,25 +1,25 @@
 <section class="content">
     <section class="recommendedMovies">
         <h3>Filmes Recomendados</h3>
-        <section class="movies">
-            @for (content of contents; track content) {
+        <section class="movies" id="movies">
+            @for (movie of movies; track movie) {
                 <section class="movie">
-                    <img src={{content.Poster}} alt="Poster" width="180px" height="270px">
-                    <!-- 
-                        <h1>{{content.Title}}</h1>
-                        <h1>{{content.Year}}</h1>
-                        <h1>{{content.Type}}</h1>
-                        -->
+                    <a href="#"><img src={{movie.Poster}} alt="Poster" width="180px" height="270px"/></a>
                 </section>
-                }
+            }
         </section>
     </section>
-    <section class="recommendedSeries">
+    <section class="recommendedSeries" id="series">
         <h3>Séries Recomendadas</h3>
         <section class="series">
-            <section class="serie">
-                <img src="" alt="">
-            </section>
+            @for(serie of series; track serie){
+                <section class="serie">
+                    <a href="#"><img src={{serie.Poster}} alt="Poster" width="180px" height="270px"/></a>
+                </section>
+            }
         </section>
+    </section>
+    <section class="searchInput">
+        <app-search-input></app-search-input>
     </section>
 </section>
