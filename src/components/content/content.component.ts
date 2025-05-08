@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GetContentService } from '../../services/get-content.service';
-import { SearchInputComponent } from '../search-input/search-input.component';
 
 @Component({
   selector: 'app-content',
-  imports: [SearchInputComponent],
+  imports: [],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })
@@ -22,6 +21,5 @@ export class ContentComponent implements OnInit{
         this.series = data.Search;
         this.series.length = 6;
       })
-
   }
 }

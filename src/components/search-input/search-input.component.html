@@ -1,7 +1,8 @@
 <section>
-    <select name="oi" id="typeContent">
-        <option value="Filme">Filmes</option>
+    <select name="type" [(ngModel)]="selectType">
+        <option value="Filmes">Filmes</option>
         <option value="Series">Séries</option>
     </select>
-    <input type="text" placeholder="oi">
+    <input type="text" placeholder="Nome do filme/série" [(ngModel)]="inputSearch"/>
+    <button (click)="searchContent()">Pesquisar</button>
 </section>
