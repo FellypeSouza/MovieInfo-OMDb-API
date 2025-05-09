@@ -1,10 +1,11 @@
 import { Component, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GetContentService } from '../../services/get-content.service';
+import { SearchOutputComponent } from '../search-output/search-output/search-output.component';
 
 @Component({
   selector: 'app-search-input',
-  imports: [FormsModule],
+  imports: [FormsModule, SearchOutputComponent],
   templateUrl: './search-input.component.html',
   styleUrl: './search-input.component.scss'
 })
@@ -18,30 +19,35 @@ export class SearchInputComponent {
 
 
   searchContent():void{
-    try{
-      if (this.selectType == "Filmes") {
-        this.getContentService.getMoviesbyName(this.inputSearch, "Movie", "").subscribe((data)=>{
-          this.movies = data.Search; //Os dados são salvos no Array
-          this.movies.length = 6;
-          console.log(this.movies);
-        })
-      }
-      else if(this.selectType == "Series"){
-        this.getContentService.getSeriesbyName(this.inputSearch, "Series", "").subscribe((data)=>{
-          this.series = data.Search;
-          this.series.length = 6;
-          console.log(this.series);
-        })
-      }
-      else{
-        console.log("Erro");
-      }
+    if(this.inputSearch == ""){
+      alert("Insira um nome");
     }
-    catch(err){
-      console.log(`Erro: ${err}`);
-    }
-    finally{
-
+    else{
+      try{
+        if (this.selectType == "Filmes") {
+          this.getContentService.getMoviesbyName(this.inputSearch, "Movie", "").subscribe((data)=>{
+            this.movies = data.Search; //Os dados são salvos no Array
+            this.movies.length = 6;
+            console.log(this.movies);
+          })
+        }
+        else if(this.selectType == "Series"){
+          this.getContentService.getSeriesbyName(this.inputSearch, "Series", "").subscribe((data)=>{
+            this.series = data.Search;
+            this.series.length = 6;
+            console.log(this.series);
+          })
+        }
+        else{
+          console.log("Erro");
+        }
+      }
+      catch(err){
+        console.log(`Erro: ${err}`);
+      }
+      finally{
+        
+      }
     }
   }
 }
