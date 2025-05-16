@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { GetContentService } from '../../services/get-content.service';
 import { SearchInputComponent } from '../search-input/search-input.component';
-import { SearchOutputComponent } from '../search-output/search-output/search-output.component';
 
 @Component({
   selector: 'app-content',
-  imports: [SearchInputComponent, SearchOutputComponent],
+  imports: [SearchInputComponent],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })

@@ -1,11 +1,10 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GetContentService } from '../../services/get-content.service';
-import { SearchOutputComponent } from '../search-output/search-output/search-output.component';
 
 @Component({
   selector: 'app-search-input',
-  imports: [FormsModule, SearchOutputComponent],
+  imports: [FormsModule],
   templateUrl: './search-input.component.html',
   styleUrl: './search-input.component.scss'
 })
@@ -17,7 +16,6 @@ export class SearchInputComponent {
 
   constructor(private getContentService: GetContentService){}
 
-
   searchContent():void{
     if(this.inputSearch == ""){
       alert("Insira um nome");
@@ -28,14 +26,12 @@ export class SearchInputComponent {
           this.getContentService.getMoviesbyName(this.inputSearch, "Movie", "").subscribe((data)=>{
             this.movies = data.Search; //Os dados são salvos no Array
             this.movies.length = 6;
-            console.log(this.movies);
           })
         }
         else if(this.selectType == "Series"){
           this.getContentService.getSeriesbyName(this.inputSearch, "Series", "").subscribe((data)=>{
             this.series = data.Search;
             this.series.length = 6;
-            console.log(this.series);
           })
         }
         else{
@@ -44,9 +40,6 @@ export class SearchInputComponent {
       }
       catch(err){
         console.log(`Erro: ${err}`);
-      }
-      finally{
-        
       }
     }
   }

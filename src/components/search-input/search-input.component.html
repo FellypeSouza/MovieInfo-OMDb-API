@@ -1,3 +1,4 @@
+<!-- Section que contém Input de pesquisa -->
 <section class="searchInput">
     <select class="selectType" name="type" [(ngModel)]="selectType">
         <option value="Filmes">Filmes</option>
@@ -5,5 +6,25 @@
     </select>
     <input type="text" placeholder="Nome do filme/série" [(ngModel)]="inputSearch"/>
     <button (click)="searchContent()">Pesquisar</button>
-    <app-search-output content="teste"></app-search-output>
+
+</section>
+
+<!-- Section que mostra resultado da pesquisa -->
+<section class="searchOutPut">
+    <section class="results" id="results">
+        @if(selectType == "Filmes"){
+            @for (movie of movies; track movie) {
+                <section class="movie">
+                    <a href=""><img src={{movie.Poster}} alt="Poster" width="180px" height="270px"/></a>
+                </section>
+            }
+        }
+        @else {
+            @for(serie of series; track serie){
+                <section class="serie">
+                    <a href="#"><img src={{serie.Poster}} alt="Poster" width="180px" height="270px"/></a>
+                </section>
+            }
+        }
+    </section>
 </section>
