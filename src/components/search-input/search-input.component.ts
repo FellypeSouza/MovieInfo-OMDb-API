@@ -13,9 +13,10 @@ export class SearchInputComponent {
   series:any[] = [];
   inputSearch:string = '';
   selectType:string = 'Filmes';
+  teste:any;
 
   constructor(private getContentService: GetContentService){}
-
+  
   searchContent():void{
     if(this.inputSearch == ""){
       alert("Insira um nome");

@@ -1,0 +1,19 @@
+
+main{
+    header{
+        background: url(../../images/background.jpg);
+        height: 100vh;
+        .headerTitle{
+            text-align: center;
+            color: #fff;
+            margin-top: 12rem;
+            h1{
+                font-size: 2rem;
+            }
+        }
+        a{
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}
