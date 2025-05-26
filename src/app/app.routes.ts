@@ -10,7 +10,7 @@ export const routes: Routes = [
         component: MainPageComponent,
     },
     {
-        path:"teste",
+        path:"contentpage",
         component: ContentPageComponent
     },
 ];

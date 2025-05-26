@@ -1,1 +1,35 @@
-<p>oi</p>
+<section class="container">
+
+    <app-nav></app-nav>
+    <section class="contentPage">
+        <!-- Como recebo apenas um único conteudo, não preciso utilizar For, apenas If -->
+        @if(contents){
+            <section class="contentImage">
+                <img [src]="contents.Poster" alt="Poster" width="300px" height="450px">
+            </section>
+            <section class="contentInfo">
+                <p class="title">{{contents.Title}} ({{contents.imdbRating}}🏆)</p>
+                <p>{{contents.Plot}}</p>
+                <p><b class="special">Year: </b>{{contents.Year}}</p>
+                <p><b class="special">Actors: </b>{{contents.Actors}}</p>
+                <p><b class="special">Directors: </b>{{contents.Director}}</p>
+                <p><b class="special">Genre: </b>{{contents.Genre}}</p>
+                <p><b class="special">˗ˏˋ ★ ˎˊ˗ Ratings:</b></p>
+                <section class="ratings">
+                    <section class="rating">
+                        <p>{{contents.Ratings[0].Source}}</p>
+                        <p>{{contents.Ratings[0].Value}}</p>
+                    </section>
+                    <section class="rating">
+                        <p>{{contents.Ratings[1].Source}}</p>
+                        <p>{{contents.Ratings[1].Value}}</p>
+                    </section>
+                    <section class="rating">
+                        <p>{{contents.Ratings[2].Source}}</p>
+                        <p>{{contents.Ratings[2].Value}}</p>
+                    </section>
+                </section>
+            </section>
+        }
+</section>
+</section>

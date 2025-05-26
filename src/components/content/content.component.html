@@ -6,7 +6,7 @@
         <h3>Filmes Recomendados</h3>
         <section class="movies" id="movies">
             @for (movie of movies; track movie) {
-                <section class="movie" (click)="openContentPage(movie)">
+                <section class="movie" (click)="openContentPage(movie.imdbID)">
                     <img src={{movie.Poster}} alt="Poster" width="180px" height="270px"/>
                 </section>
             }

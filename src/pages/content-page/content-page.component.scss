@@ -1,0 +1,42 @@
+$backgroundColor:#0a0a0a;
+.container{
+    background-color: $backgroundColor;
+    height: 100vh;
+}
+.contentPage{
+    background-color: $backgroundColor;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    .contentImage{
+
+    }
+    .contentInfo{
+        max-width: 800px;
+        height: 450px;
+        margin-left: 1rem;
+        p{
+            margin: 0;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        .title{
+            font-size: 3rem;
+        }
+        .special{
+            color: grey;
+        }
+        .ratings{
+            display: flex;
+            .rating{
+                background-color: #000000;
+                padding: 1rem;
+                margin: 0 1rem 0 0;
+                text-align: center;
+                border-radius: 10px;
+            }
+        }
+    }
+}
