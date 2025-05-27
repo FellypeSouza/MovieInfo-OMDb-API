@@ -2,7 +2,7 @@
     <section class="searchContainer">
         <app-search-input></app-search-input>
     </section>
-    <section class="recommendedMovies">
+    <section class="recommendedMovies" id="recommendedMovies">
         <h3>Filmes Recomendados</h3>
         <section class="movies" id="movies">
             @for (movie of movies; track movie) {
@@ -12,14 +12,15 @@
             }
         </section>
     </section>
-    <section class="recommendedSeries" id="series">
-        <h3>Séries Recomendadas</h3>
+    <section class="recommendedSeries" id="recommendedSeries">
+        <h3>Séries Recomndadas</h3>
         <section class="series">
             @for(serie of series; track serie){
-                <section class="serie">
-                    <a href="#"><img src={{serie.Poster}} alt="Poster" width="180px" height="270px"/></a>
+                <section class="serie" (click)="openContentPage(serie.imdbID)">
+                    <img src={{serie.Poster}} alt="Poster" width="180px" height="270px"/>
                 </section>
             }
         </section>
     </section>
+    <app-about-project></app-about-project>
 </section>

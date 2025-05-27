@@ -35,5 +35,8 @@
         display: grid;
         justify-content: space-between;
         grid-template-columns: auto auto auto auto auto auto;
+        .movie, .serie{
+            cursor: pointer;
+        }
     }
 }

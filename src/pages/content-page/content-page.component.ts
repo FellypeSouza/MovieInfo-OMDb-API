@@ -22,8 +22,6 @@ export class ContentPageComponent implements OnInit {
     //Faço a requisição dos dados do filme e atribuo a variável contents. Como recebo apenas um único filme, não preciso declarar contents como Array.
     this.getContentService.getContentById(this.contentId).subscribe((data)=>{
         this.contents = data; //Os dados são salvos no Array
-        console.log(this.contents);
-
     })
   }
 }

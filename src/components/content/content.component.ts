@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { GetContentService } from '../../services/get-content.service';
-import { ContentPageComponent } from '../../pages/content-page/content-page.component';
-import { Router } from '@angular/router';
 import { SearchInputComponent } from '../search-input/search-input.component';
+import { AboutProjectComponent } from '../about-project/about-project.component';
+import { GetContentService } from '../../services/get-content.service';
+import { Router } from '@angular/router';
 import { SendContentIdServiceService } from '../../services/sendContentIdService/send-content-id-service.service';
 
 @Component({
   selector: 'app-content',
-  imports: [SearchInputComponent],
+  imports: [SearchInputComponent, AboutProjectComponent],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })

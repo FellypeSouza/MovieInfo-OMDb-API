@@ -14,16 +14,16 @@
     <section class="results" id="results">
         @if(selectType == "Filmes"){
             @for (movie of movies; track movie) {
-                <section class="movie">
-                    <a href=""><img src={{movie.Poster}} alt="Poster" width="180px" height="270px"/></a>
-                </section>
+                    <section class="movie" (click)="openContentPage(movie.imdbID)">
+                        <img src={{movie.Poster}} alt="Poster" width="180px" height="270px"/>
+                    </section>
             }
         }
         @else {
             @for(serie of series; track serie){
-                <section class="serie">
-                    <a href="#"><img src={{serie.Poster}} alt="Poster" width="180px" height="270px"/></a>
-                </section>
+                    <section class="serie" (click)="openContentPage(serie.imdbID)">
+                        <img src={{serie.Poster}} alt="Poster" width="180px" height="270px"/>
+                    </section>
             }
         }
     </section>

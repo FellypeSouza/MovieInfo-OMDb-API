@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GetContentService } from '../../services/get-content.service';
+import { SendContentIdServiceService } from '../../services/sendContentIdService/send-content-id-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-input',
@@ -15,8 +17,13 @@ export class SearchInputComponent {
   selectType:string = 'Filmes';
   teste:any;
 
-  constructor(private getContentService: GetContentService){}
+  constructor(private getContentService: GetContentService, private sendContentIdServiceService: SendContentIdServiceService, private router: Router){}
   
+  openContentPage(contentId:string):void{
+    this.sendContentIdServiceService.receiveContentId(contentId);
+    this.router.navigateByUrl("contentpage");
+  }
+
   searchContent():void{
     if(this.inputSearch == ""){
       alert("Insira um nome");
