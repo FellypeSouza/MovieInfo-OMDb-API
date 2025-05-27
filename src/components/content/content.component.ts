@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { AboutProjectComponent } from '../about-project/about-project.component';
+import { FooterComponent } from '../footer/footer.component';
 import { GetContentService } from '../../services/get-content.service';
 import { Router } from '@angular/router';
 import { SendContentIdServiceService } from '../../services/sendContentIdService/send-content-id-service.service';
 
 @Component({
   selector: 'app-content',
-  imports: [SearchInputComponent, AboutProjectComponent],
+  imports: [SearchInputComponent, AboutProjectComponent, FooterComponent],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })

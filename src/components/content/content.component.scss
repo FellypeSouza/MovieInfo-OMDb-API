@@ -14,5 +14,13 @@
             cursor: pointer;
         }
     }
-    
+}
+@media (max-width:1200px) {
+    .movies, .series{
+        background-color: aqua;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 1px;
+    }
 }

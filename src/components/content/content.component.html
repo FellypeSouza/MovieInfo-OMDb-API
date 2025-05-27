@@ -13,7 +13,7 @@
         </section>
     </section>
     <section class="recommendedSeries" id="recommendedSeries">
-        <h3>Séries Recomndadas</h3>
+        <h3>Séries Recomendadas</h3>
         <section class="series">
             @for(serie of series; track serie){
                 <section class="serie" (click)="openContentPage(serie.imdbID)">
@@ -24,3 +24,4 @@
     </section>
     <app-about-project></app-about-project>
 </section>
+<app-footer></app-footer>

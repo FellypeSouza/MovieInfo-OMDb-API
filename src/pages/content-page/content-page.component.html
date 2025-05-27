@@ -1,5 +1,6 @@
 <section class="container">
     <app-nav></app-nav>
+    <a href="/">Voltar</a>
     <section class="contentPage">
         <!-- Como recebo apenas um único conteudo, não preciso utilizar For, apenas If -->
         @if(contents?.Title){
@@ -16,6 +17,7 @@
                 <p><b class="special">Genre: </b>{{contents.Genre}}</p>
                 <p><b class="special">˗ˏˋ ★ ˎˊ˗ Ratings:</b></p>
                 <section class="ratings">
+                    <!-- Esse If serve para verificar se existe a avaliação, se sim, exibe na tela -->
                     @if (contents?.Ratings[0]) {
                         <section class="rating">
                             <p>{{contents.Ratings[0].Source}}</p>
