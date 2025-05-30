@@ -31,15 +31,12 @@ nav{
 @media (max-width:550px) {
     nav{
         background-color: aqua;
+        flex-direction: column;
         .navTitle{
             font-size: 15px;
         }
         .navLinks{
-            ul{
-                li{
-                    margin: 0 0.5rem 0 0.5rem;
-                }
-            }
+            font-size: 15px;
         }
     }
 }
