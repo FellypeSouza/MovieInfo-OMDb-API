@@ -27,16 +27,48 @@ nav{
             }
         }
     }
+    .mobileMenu{
+        display: none;
+        .menuIcon{
+            button{
+                border: none;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0);
+                font-size: 20px;
+            }
+        }
+        .menuLinks{
+            position: absolute;
+            left: 0;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.801);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 11.5px;
+            a{
+                color: #fff;
+                margin: 0.25rem 0 0.25rem 0;
+            }
+        }
+    }
 }
 @media (max-width:550px) {
     nav{
-        background-color: aqua;
-        flex-direction: column;
         .navTitle{
             font-size: 15px;
         }
         .navLinks{
             font-size: 15px;
+            display: none;
         }
+        .mobileMenu{
+            display: block;
+        }
+    }
+}
+@media (max-width:140px) {
+    nav{
+        flex-direction: column;
     }
 }

@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-  
-  
+  menuState:boolean = false;
+
+  switchMenu():void{
+    if(this.menuState == false){
+      this.menuState = true;
+    }
+    else{
+      this.menuState = false;
+    }
+  }
 }

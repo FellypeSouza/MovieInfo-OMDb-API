@@ -17,3 +17,31 @@ main{
         }
     }
 }
+@media (max-width:300px) {
+    main{
+        header{
+            .headerTitle{
+                h1{
+                    font-size: 1.5rem;
+                }
+                h3{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width:190px) {
+    main{
+        header{
+            .headerTitle{
+                h1{
+                    font-size: 1rem;
+                }
+                h3{
+                    font-size: 0.70rem;
+                }
+            }
+        }
+    }
+}

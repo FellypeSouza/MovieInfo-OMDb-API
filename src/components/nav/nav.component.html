@@ -10,4 +10,21 @@
             <li><a href="#aboutProject">Sobre o projeto</a></li>
         </ul>
     </section>
+    <!-- ☰ -->
+    <section class="mobileMenu">
+        <section class="menuIcon">
+            @if(menuState == true){}
+            <button (click)="switchMenu()">
+                @if(menuState == true){╳} @else {☰}
+            </button>
+        </section>
+        @if(menuState == true){
+            <section class="menuLinks">
+                    <a href="#">Início</a>
+                    <a href="#recommendedMovies">Filmes</a>
+                    <a href="#recommendedSeries">Séries</a>
+                    <a href="#aboutProject">Sobre o projeto</a>
+            </section>
+        }
+    </section>
 </nav>
