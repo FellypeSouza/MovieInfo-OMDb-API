@@ -43,3 +43,43 @@ $backgroundColor:#0a0a0a;
         }
     }
 }
+/* @media (max-width:1100px) {
+    .container{
+        .contentPage{
+            flex-direction: column;
+            .contentInfo{
+                max-width: 300px;
+                .title{
+                    font-size: 2rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+} */
+ @media (max-width:1100px) {
+    .container{
+        .contentPage{
+            .contentInfo{
+                max-width: 600px;
+                .ratings{
+                    .rating{
+                    }
+                }
+            }
+        }
+    }
+ }
+ @media (max-width:925px){
+    .container{
+        .contentPage{
+            .contentInfo{
+                max-width: 450px;
+                .ratings{
+                    .rating{
+                    }
+                }
+            }
+        }
+    }
+ }
